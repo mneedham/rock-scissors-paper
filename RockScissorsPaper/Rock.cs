@@ -14,7 +14,7 @@ namespace RockScissorsPaper
 
         public bool BeatsScissors()
         {
-            return false;
+            return true;
         }
     }
 }
