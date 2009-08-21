@@ -14,9 +14,19 @@ namespace RockScissorsPaper
             Assert.AreEqual(rock, WinnerOfBattle(rock, scissors));
         }
 
-        private Rock WinnerOfBattle(Rock rock, Scissors scissors)
+        [Test]
+        public void GivenARockAndPaperThePaperShouldWin()
         {
-            return rock;
+            var rock = new Rock();
+            var paper = new Paper();
+
+            Assert.AreEqual(paper, WinnerOfBattle(rock, paper));
+        }
+
+        private WeaponOfMassDestruction WinnerOfBattle(Rock rock, WeaponOfMassDestruction otherWeapon)
+        {
+            var beatRock = otherWeapon.BeatsRock();
+            return beatRock ? otherWeapon : rock;
         }
 
         [Test]
