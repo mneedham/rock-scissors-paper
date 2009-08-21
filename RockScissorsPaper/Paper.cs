@@ -7,6 +7,16 @@ namespace RockScissorsPaper
             return true;
         }
 
+        public bool BeatsScissors()
+        {
+            return false;
+        }
+
+        public bool BeatsPaper()
+        {
+            return false;
+        }
+
         public bool Equals(Paper obj)
         {
             return !ReferenceEquals(null, obj);
@@ -26,19 +36,13 @@ namespace RockScissorsPaper
             return 0;
         }
 
-        public bool BeatsScissors()
-        {
-            return false;
-        }
-
-        public bool BeatsPaper()
-        {
-            return false;
-        }
-
         public string Battling(WeaponOfMassDestruction weapon)
         {
-            return Equals(weapon) ? "draw" : "win";
+            if (Equals(weapon))
+            {
+                return "draw";
+            }
+            return weapon.BeatsPaper() ? "loss": "win";
         }
     }
 }

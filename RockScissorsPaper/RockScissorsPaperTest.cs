@@ -72,7 +72,11 @@ namespace RockScissorsPaper
             Assert.AreEqual("draw", new Paper().Battling(new Paper()));
         }
 
-
+        [Test]
+        public void ResultOfPaperBattlingScissorsShouldBeALoss()
+        {
+            Assert.AreEqual("loss", new Paper().Battling(new Scissors()));
+        }
 
     }
 
