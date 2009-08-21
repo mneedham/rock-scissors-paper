@@ -34,14 +34,11 @@ namespace RockScissorsPaper
         [Test]
         public void GivenTwoRocksThereShouldBeNoWinner()
         {
-            var battleResult = RockVRockLeadsToNoWinner(new Rock(), new Rock());
+            var battle = new Battle(new Rock(), new Rock());
+
+            var battleResult = battle.Commence();
 
             Assert.AreEqual(false, battleResult.HasWinner);
-        }
-
-        private BattleResult RockVRockLeadsToNoWinner(Rock rock, Rock rockTwo)
-        {
-            return BattleResult.WithNoWinner();
         }
 
         public class Battle
@@ -62,11 +59,7 @@ namespace RockScissorsPaper
 
             public BattleResult Commence()
             {
-
-                    var winner = Winner();
-                    return BattleResult.WithWinner(winner);
-                
-                
+                return HasWinner() ? BattleResult.WithWinner(Winner()) : BattleResult.WithNoWinner();
             }
 
             public IWeaponOfMassDestruction Winner()
