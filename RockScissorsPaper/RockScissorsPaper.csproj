@@ -57,6 +57,8 @@
     <Compile Include="WeaponComparison.cs" />
     <Compile Include="WeaponComparisonTest.cs" />
     <Compile Include="IWeaponOfMassDestruction.cs" />
+    <Compile Include="WeaponOfMassDestructionTest.cs" />
+    <Compile Include="WeaponsBattlingTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
