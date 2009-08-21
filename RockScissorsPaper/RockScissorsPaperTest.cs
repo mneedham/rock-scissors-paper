@@ -8,7 +8,7 @@ namespace RockScissorsPaper
         [Test]
         public void PaperShouldBeatRock()
         {
-            Assert.AreEqual(true, PaperBeatsRock());
+            Assert.AreEqual(true, new Paper().BeatsRock());
         }
 
         [Test]
@@ -19,7 +19,10 @@ namespace RockScissorsPaper
 
         public class Paper
         {
-            
+            public bool BeatsRock()
+            {
+                return true;
+            }
         }
 
         private bool PaperBeatsPaper()
@@ -27,9 +30,6 @@ namespace RockScissorsPaper
             return false;
         }
 
-        private bool PaperBeatsRock()
-        {
-            return true;
-        }
+       
     }
 }
