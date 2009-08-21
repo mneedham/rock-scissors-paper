@@ -12,6 +12,11 @@ namespace RockScissorsPaper
             return false;
         }
 
+        public string Battling(WeaponOfMassDestruction weapon)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public bool BeatsScissors()
         {
             return true;

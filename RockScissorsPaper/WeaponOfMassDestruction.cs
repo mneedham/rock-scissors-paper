@@ -5,5 +5,6 @@ namespace RockScissorsPaper
         bool BeatsPaper();
         bool BeatsScissors();
         bool BeatsRock();
+        string Battling(WeaponOfMassDestruction weapon);
     }
 }

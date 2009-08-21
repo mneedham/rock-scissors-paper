@@ -16,5 +16,14 @@ namespace RockScissorsPaper
         {
             return false;
         }
+
+        public string Battling(WeaponOfMassDestruction weapon)
+        {
+            if (new WeaponComparison(this, weapon).AreDifferent())
+            {
+                return weapon.BeatsScissors() ? "loss" : "win";
+            }
+            return "draw";
+        }
     }
 }

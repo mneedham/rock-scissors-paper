@@ -61,21 +61,25 @@ namespace RockScissorsPaper
     public class WeaponsBattlingTest
     {
         [Test]
-        public void ResultOfPaperBattlingRockShouldBeAWin()
+        public void PaperBattlingTheOthers()
         {
             Assert.AreEqual("win", new Paper().Battling(new Rock()));
+            Assert.AreEqual("draw", new Paper().Battling(new Paper()));
+            Assert.AreEqual("loss", new Paper().Battling(new Scissors()));
         }
 
         [Test]
-        public void ResultOfPaperBattlingPaperShouldBeADraw()
+        public void ScissorsBattlingTheOthers()
         {
-            Assert.AreEqual("draw", new Paper().Battling(new Paper()));
+            Assert.AreEqual("win", new Scissors().Battling(new Paper()));
+            Assert.AreEqual("draw", new Scissors().Battling(new Scissors()));
+            Assert.AreEqual("loss", new Scissors().Battling(new Rock()));
         }
 
         [Test]
         public void ResultOfPaperBattlingScissorsShouldBeALoss()
         {
-            Assert.AreEqual("loss", new Paper().Battling(new Scissors()));
+            
         }
 
     }
