@@ -2,11 +2,11 @@ using System;
 
 namespace RockScissorsPaper
 {
-    public abstract class WeaponBase : IWeaponOfMassDestruction
+    public abstract class WeaponBase : IWeapon
     {
-        private readonly Func<IWeaponOfMassDestruction, bool> beatenBy;
+        private readonly Func<IWeapon, bool> beatenBy;
 
-        protected WeaponBase(Func<IWeaponOfMassDestruction, bool> beatenBy)
+        protected WeaponBase(Func<IWeapon, bool> beatenBy)
         {
             this.beatenBy = beatenBy;
         }
@@ -15,7 +15,7 @@ namespace RockScissorsPaper
         public abstract bool BeatsScissors();
         public abstract bool BeatsRock();
 
-        public string Battling(IWeaponOfMassDestruction weapon)
+        public string Battling(IWeapon weapon)
         {
             if (new WeaponComparison(this, weapon).AreDifferent())
             {

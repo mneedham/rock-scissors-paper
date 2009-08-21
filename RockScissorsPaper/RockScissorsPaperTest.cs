@@ -43,10 +43,10 @@ namespace RockScissorsPaper
 
         public class Battle
         {
-            private readonly IWeaponOfMassDestruction throwOne;
-            private readonly IWeaponOfMassDestruction throwTwo;
+            private readonly IWeapon throwOne;
+            private readonly IWeapon throwTwo;
 
-            public Battle(IWeaponOfMassDestruction throwOne, IWeaponOfMassDestruction throwTwo)
+            public Battle(IWeapon throwOne, IWeapon throwTwo)
             {
                 this.throwOne = throwOne;
                 this.throwTwo = throwTwo;
@@ -62,7 +62,7 @@ namespace RockScissorsPaper
                 return HasWinner() ? BattleResult.WithWinner(Winner()) : BattleResult.WithNoWinner();
             }
 
-            public IWeaponOfMassDestruction Winner()
+            public IWeapon Winner()
             {
                 var beatRock = throwTwo.BeatsRock();
                 return beatRock ? throwTwo : throwOne;
@@ -72,14 +72,14 @@ namespace RockScissorsPaper
 
     public class BattleResult
     {
-        private readonly IWeaponOfMassDestruction winner;
+        private readonly IWeapon winner;
 
-        private BattleResult(IWeaponOfMassDestruction winner)
+        private BattleResult(IWeapon winner)
         {
             this.winner = winner;
         }
 
-        public IWeaponOfMassDestruction Winner
+        public IWeapon Winner
         {
             get { return winner; }
         }
@@ -89,7 +89,7 @@ namespace RockScissorsPaper
             get { return winner != null; }
         }
 
-        public static BattleResult WithWinner(IWeaponOfMassDestruction winner)
+        public static BattleResult WithWinner(IWeapon winner)
         {
             return new BattleResult(winner);
         }
