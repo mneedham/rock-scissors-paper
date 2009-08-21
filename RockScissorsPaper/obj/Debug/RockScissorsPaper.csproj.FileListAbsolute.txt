@@ -1,0 +1,6 @@
+C:\Playbox\RockScissorsPaper\RockScissorsPaper\bin\Debug\RockScissorsPaper.dll
+C:\Playbox\RockScissorsPaper\RockScissorsPaper\bin\Debug\RockScissorsPaper.pdb
+C:\Playbox\RockScissorsPaper\RockScissorsPaper\bin\Debug\nunit.framework.dll
+C:\Playbox\RockScissorsPaper\RockScissorsPaper\obj\Debug\ResolveAssemblyReference.cache
+C:\Playbox\RockScissorsPaper\RockScissorsPaper\obj\Debug\RockScissorsPaper.dll
+C:\Playbox\RockScissorsPaper\RockScissorsPaper\obj\Debug\RockScissorsPaper.pdb
