@@ -46,7 +46,7 @@ namespace RockScissorsPaper
 
             public bool HasWinner()
             {
-                return throwOne.GetType() != throwTwo.GetType();
+                return new WeaponComparison(throwOne, throwTwo).AreDifferent();
             }
 
             public IWeaponOfMassDestruction Winner()
