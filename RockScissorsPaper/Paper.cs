@@ -1,29 +1,22 @@
 namespace RockScissorsPaper
 {
-    public class Paper : IWeaponOfMassDestruction
+    public class Paper : WeaponBase
     {
-        public bool BeatsRock()
+        public Paper() : base(weapon => weapon.BeatsPaper()) { }
+
+        public override bool BeatsRock()
         {
             return true;
         }
 
-        public bool BeatsScissors()
+        public override bool BeatsScissors()
         {
             return false;
         }
 
-        public bool BeatsPaper()
+        public override bool BeatsPaper()
         {
             return false;
-        }
-
-        public string Battling(IWeaponOfMassDestruction weapon)
-        {
-            if (new WeaponComparison(this, weapon).AreDifferent())
-            {
-                return weapon.BeatsPaper() ? "loss" : "win";
-            }
-            return "draw";
         }
     }
 }

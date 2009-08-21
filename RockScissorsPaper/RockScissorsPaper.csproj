@@ -57,7 +57,7 @@
     <Compile Include="WeaponBase.cs" />
     <Compile Include="WeaponComparison.cs" />
     <Compile Include="WeaponComparisonTest.cs" />
-    <Compile Include="IWeaponOfMassDestruction.cs" />
+    <Compile Include="IWeapon.cs" />
     <Compile Include="WeaponOfMassDestructionTest.cs" />
     <Compile Include="WeaponsBattlingTest.cs" />
   </ItemGroup>

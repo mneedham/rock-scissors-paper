@@ -1,8 +1,5 @@
-using System;
-
 namespace RockScissorsPaper
 {
-
     public class Rock : WeaponBase
     {
         public Rock() : base(weapon => weapon.BeatsRock()) { }
