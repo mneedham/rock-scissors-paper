@@ -14,7 +14,7 @@ namespace RockScissorsPaper
 
         public bool Beats(WeaponOfMassDestruction weaponOfMassDestruction)
         {
-            throw new System.NotImplementedException();
+            return !weaponOfMassDestruction.BeatsRock();
         }
 
         public bool BeatsScissors()
