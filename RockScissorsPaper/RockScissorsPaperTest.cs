@@ -53,6 +53,17 @@ namespace RockScissorsPaper
             Assert.AreEqual(false, ScissorsBeatRock());
         }
 
+        [Test]
+        public void ScissorsShouldBeatPaper()
+        {
+            Assert.AreEqual(true, ScissorsBeatsPaper());
+        }
+
+        private bool ScissorsBeatsPaper()
+        {
+            return true;
+        }
+
         private bool ScissorsBeatRock()
         {
             return false;
