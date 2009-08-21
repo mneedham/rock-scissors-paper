@@ -16,5 +16,10 @@ namespace RockScissorsPaper
         {
             return false;
         }
+
+        public bool Beats(WeaponOfMassDestruction weaponOfMassDestruction)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
