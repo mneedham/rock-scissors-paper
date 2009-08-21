@@ -6,6 +6,20 @@ namespace RockScissorsPaper
     public class RockScissorsPaperTest
     {
         [Test]
+        public void GivenARockAndScissorsTheRockShouldWin()
+        {
+            var rock = new Rock();
+            var scissors = new Scissors();
+
+            Assert.AreEqual(rock, WinnerOfBattle(rock, scissors));
+        }
+
+        private Rock WinnerOfBattle(Rock rock, Scissors scissors)
+        {
+            return rock;
+        }
+
+        [Test]
         public void PaperShouldBeatRock()
         {
             Assert.AreEqual(true, new Paper().BeatsRock());
