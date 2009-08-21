@@ -16,5 +16,10 @@ namespace RockScissorsPaper
         {
             return false;
         }
+
+        public string Battling(Rock rock)
+        {
+            return "win";
+        }
     }
 }
