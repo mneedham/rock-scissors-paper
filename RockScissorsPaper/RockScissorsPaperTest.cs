@@ -83,8 +83,6 @@ namespace RockScissorsPaper
     [TestFixture]
     public class WeaponOfMassDestructionTest
     {
-
-
         [Test]
         public void PaperShouldBeatRock()
         {
