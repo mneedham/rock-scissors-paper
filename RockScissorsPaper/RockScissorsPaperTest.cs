@@ -26,10 +26,20 @@ namespace RockScissorsPaper
         [Test]
         public void GivenTwoRocksThereShouldBeNoWinner()
         {
-            var rockOne = new Rock();
-            var rockTwo = new Rock();
+            Assert.AreEqual(false, new Battle(new Rock(), new Rock()).HasWinner());
+        }
 
-            Assert.AreEqual(false, BattleHasWinner(rockOne, rockTwo));
+        public class Battle
+        {
+            public Battle(Rock playerOne, Rock playerTwo )
+            {
+                
+            }
+
+            public bool HasWinner()
+            {
+                return false;
+            }
         }
 
         private bool BattleHasWinner(Rock throwOne, Rock throwTwo)
