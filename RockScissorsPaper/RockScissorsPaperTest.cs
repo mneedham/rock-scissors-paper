@@ -40,25 +40,23 @@ namespace RockScissorsPaper
         {
             Assert.AreEqual(true, new Rock().BeatsScissors());
         }
+    }
 
-        public class Paper : WeaponOfMassDestruction
+    public class Paper : WeaponOfMassDestruction
+    {
+        public bool BeatsRock()
         {
-            public bool BeatsRock()
-            {
-                return true;
-            }
-
-            public bool BeatsScissors()
-            {
-                return false;
-            }
-
-            public bool BeatsPaper()
-            {
-                return false;
-            }
+            return true;
         }
 
-       
+        public bool BeatsScissors()
+        {
+            return false;
+        }
+
+        public bool BeatsPaper()
+        {
+            return false;
+        }
     }
 }
