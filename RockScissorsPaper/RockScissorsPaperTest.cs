@@ -9,6 +9,7 @@ namespace RockScissorsPaper
         public void PaperShouldBeatRock()
         {
             Assert.AreEqual(true, new Paper().BeatsRock());
+            Assert.AreEqual(true, new Paper().Beats(new Rock()));
         }
 
         [Test]
