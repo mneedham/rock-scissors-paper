@@ -54,6 +54,8 @@
     <Compile Include="RockScissorsPaperTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scissors.cs" />
+    <Compile Include="WeaponComparison.cs" />
+    <Compile Include="WeaponComparisonTest.cs" />
     <Compile Include="WeaponOfMassDestruction.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
