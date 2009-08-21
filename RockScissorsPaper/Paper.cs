@@ -38,6 +38,7 @@ namespace RockScissorsPaper
 
         public string Battling(WeaponOfMassDestruction weapon)
         {
+
             if (Equals(weapon))
             {
                 return "draw";
