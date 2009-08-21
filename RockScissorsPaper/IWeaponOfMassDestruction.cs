@@ -1,10 +1,10 @@
 namespace RockScissorsPaper
 {
-    public interface WeaponOfMassDestruction
+    public interface IWeaponOfMassDestruction
     {
         bool BeatsPaper();
         bool BeatsScissors();
         bool BeatsRock();
-        string Battling(WeaponOfMassDestruction weapon);
+        string Battling(IWeaponOfMassDestruction weapon);
     }
 }

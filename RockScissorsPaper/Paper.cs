@@ -1,6 +1,6 @@
 namespace RockScissorsPaper
 {
-    public class Paper : WeaponOfMassDestruction
+    public class Paper : IWeaponOfMassDestruction
     {
         public bool BeatsRock()
         {
@@ -17,7 +17,7 @@ namespace RockScissorsPaper
             return false;
         }
 
-        public string Battling(WeaponOfMassDestruction weapon)
+        public string Battling(IWeaponOfMassDestruction weapon)
         {
             if (new WeaponComparison(this, weapon).AreDifferent())
             {

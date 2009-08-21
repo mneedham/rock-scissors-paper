@@ -2,10 +2,10 @@ namespace RockScissorsPaper
 {
     public class WeaponComparison
     {
-        private readonly WeaponOfMassDestruction weaponOne;
-        private readonly WeaponOfMassDestruction weaponTwo;
+        private readonly IWeaponOfMassDestruction weaponOne;
+        private readonly IWeaponOfMassDestruction weaponTwo;
 
-        public WeaponComparison(WeaponOfMassDestruction weaponOne, WeaponOfMassDestruction weaponTwo)
+        public WeaponComparison(IWeaponOfMassDestruction weaponOne, IWeaponOfMassDestruction weaponTwo)
         {
             this.weaponOne = weaponOne;
             this.weaponTwo = weaponTwo;

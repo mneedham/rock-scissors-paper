@@ -35,10 +35,10 @@ namespace RockScissorsPaper
 
         public class Battle
         {
-            private readonly WeaponOfMassDestruction throwOne;
-            private readonly WeaponOfMassDestruction throwTwo;
+            private readonly IWeaponOfMassDestruction throwOne;
+            private readonly IWeaponOfMassDestruction throwTwo;
 
-            public Battle(WeaponOfMassDestruction throwOne, WeaponOfMassDestruction throwTwo)
+            public Battle(IWeaponOfMassDestruction throwOne, IWeaponOfMassDestruction throwTwo)
             {
                 this.throwOne = throwOne;
                 this.throwTwo = throwTwo;
@@ -49,7 +49,7 @@ namespace RockScissorsPaper
                 return throwOne.GetType() != throwTwo.GetType();
             }
 
-            public WeaponOfMassDestruction Winner()
+            public IWeaponOfMassDestruction Winner()
             {
                 var beatRock = throwTwo.BeatsRock();
                 return beatRock ? throwTwo : throwOne;
