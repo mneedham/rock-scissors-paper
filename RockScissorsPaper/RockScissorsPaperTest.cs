@@ -10,8 +10,9 @@ namespace RockScissorsPaper
         {
             var rock = new Rock();
             var scissors = new Scissors();
+            var battle = new Battle(rock, scissors);
 
-            Assert.AreEqual(rock, WinnerOfBattle(rock, scissors));
+            Assert.AreEqual(rock, battle.Winner());
         }
 
         [Test]
@@ -19,8 +20,9 @@ namespace RockScissorsPaper
         {
             var rock = new Rock();
             var paper = new Paper();
+            var battle = new Battle(rock, paper);
 
-            Assert.AreEqual(paper, WinnerOfBattle(rock, paper));
+            Assert.AreEqual(paper, battle.Winner());
         }
 
         [Test]
@@ -31,26 +33,25 @@ namespace RockScissorsPaper
 
         public class Battle
         {
-            public Battle(Rock playerOne, Rock playerTwo )
+            private readonly WeaponOfMassDestruction throwOne;
+            private readonly WeaponOfMassDestruction throwTwo;
+
+            public Battle(WeaponOfMassDestruction throwOne, WeaponOfMassDestruction throwTwo)
             {
-                
+                this.throwOne = throwOne;
+                this.throwTwo = throwTwo;
             }
 
             public bool HasWinner()
             {
                 return false;
             }
-        }
 
-        private bool BattleHasWinner(Rock throwOne, Rock throwTwo)
-        {
-            return false;
-        }
-
-        private WeaponOfMassDestruction WinnerOfBattle(Rock rock, WeaponOfMassDestruction otherWeapon)
-        {
-            var beatRock = otherWeapon.BeatsRock();
-            return beatRock ? otherWeapon : rock;
+            public WeaponOfMassDestruction Winner()
+            {
+                var beatRock = throwTwo.BeatsRock();
+                return beatRock ? throwTwo : throwOne;
+            }
         }
 
         [Test]
