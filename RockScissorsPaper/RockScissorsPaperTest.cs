@@ -45,6 +45,11 @@ namespace RockScissorsPaper
             return false;
         }
 
+        public class Rock
+        {
+            
+        }
+
         public class Paper
         {
             public bool BeatsRock()
