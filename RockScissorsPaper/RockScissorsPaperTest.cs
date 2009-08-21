@@ -84,6 +84,29 @@ namespace RockScissorsPaper
     public class WeaponOfMassDestructionTest
     {
         [Test]
+        public void PaperShouldBeRecognisedAsBeingDifferentToOtherWeapons()
+        {
+            Assert.AreEqual(true, PaperIsDifferentToRock());
+            Assert.AreEqual(true, PaperIsDifferentToScissors());
+            Assert.AreEqual(false, PaperIsNotDifferentToPaper());
+        }
+
+        private bool PaperIsDifferentToScissors()
+        {
+            return true;
+        }
+
+        private bool PaperIsNotDifferentToPaper()
+        {
+            return false;
+        }
+
+        private bool PaperIsDifferentToRock()
+        {
+            return true;
+        }
+
+        [Test]
         public void PaperShouldBeatRock()
         {
             Assert.AreEqual(true, new Paper().BeatsRock());
