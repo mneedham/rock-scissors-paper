@@ -81,7 +81,7 @@ namespace RockScissorsPaper
     }
 
     [TestFixture]
-    public class WeaponOfMassDestructionTest
+    public class WeaponComparisonTest
     {
         [Test]
         public void PaperShouldBeRecognisedAsBeingDifferentToOtherWeapons()
@@ -90,23 +90,12 @@ namespace RockScissorsPaper
             Assert.AreEqual(true, new WeaponComparison(new Paper(), new Scissors()).AreDifferent());
             Assert.AreEqual(false, new WeaponComparison(new Paper(), new Paper()).AreDifferent());
         }
+    }
 
-        public class WeaponComparison
-        {
-            private readonly WeaponOfMassDestruction weaponOne;
-            private readonly WeaponOfMassDestruction weaponTwo;
+    [TestFixture]
+    public class WeaponOfMassDestructionTest
+    {
 
-            public WeaponComparison(WeaponOfMassDestruction weaponOne, WeaponOfMassDestruction weaponTwo)
-            {
-                this.weaponOne = weaponOne;
-                this.weaponTwo = weaponTwo;
-            }
-
-            public bool AreDifferent()
-            {
-                return weaponOne.GetType() != weaponTwo.GetType();
-            }
-        }
 
         [Test]
         public void PaperShouldBeatRock()
