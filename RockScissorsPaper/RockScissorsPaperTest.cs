@@ -41,7 +41,14 @@ namespace RockScissorsPaper
             Assert.AreEqual(true, new Rock().BeatsScissors());
         }
 
-        public class Rock
+        public interface WeaponOfMassDestruction
+        {
+            bool BeatsPaper();
+            bool BeatsScissors();
+            bool BeatsRock();
+        }
+
+        public class Rock : WeaponOfMassDestruction
         {
             public bool BeatsPaper()
             {
@@ -59,7 +66,7 @@ namespace RockScissorsPaper
             }
         }
 
-        public class Paper
+        public class Paper : WeaponOfMassDestruction
         {
             public bool BeatsRock()
             {
