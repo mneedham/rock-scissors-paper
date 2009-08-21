@@ -12,6 +12,7 @@ namespace RockScissorsPaper
             var scissors = new Scissors();
             var battle = new Battle(rock, scissors);
 
+            Assert.AreEqual(true, battle.HasWinner());
             Assert.AreEqual(rock, battle.Winner());
         }
 
@@ -22,6 +23,7 @@ namespace RockScissorsPaper
             var paper = new Paper();
             var battle = new Battle(rock, paper);
 
+            Assert.AreEqual(true, battle.HasWinner());
             Assert.AreEqual(paper, battle.Winner());
         }
 
@@ -44,7 +46,7 @@ namespace RockScissorsPaper
 
             public bool HasWinner()
             {
-                return false;
+                return throwOne.GetType() != throwTwo.GetType();
             }
 
             public WeaponOfMassDestruction Winner()
