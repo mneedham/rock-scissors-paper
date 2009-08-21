@@ -1,27 +1,23 @@
+using System;
+
 namespace RockScissorsPaper
 {
-    public class Rock : IWeaponOfMassDestruction
+
+    public class Rock : WeaponBase
     {
-        public bool BeatsPaper()
+        public Rock() : base(weapon => weapon.BeatsRock()) { }
+
+        public override bool BeatsPaper()
         {
             return false;
         }
 
-        public bool BeatsRock()
+        public override bool BeatsRock()
         {
             return false;
         }
 
-        public string Battling(IWeaponOfMassDestruction weapon)
-        {
-            if (new WeaponComparison(this, weapon).AreDifferent())
-            {
-                return weapon.BeatsRock() ? "loss" : "win";
-            }
-            return "draw";
-        }
-
-        public bool BeatsScissors()
+        public override bool BeatsScissors()
         {
             return true;
         }
