@@ -56,6 +56,12 @@ namespace RockScissorsPaper
             }
         }
 
+
+    }
+
+    [TestFixture]
+    public class WeaponOfMassDestructionTest
+    {
         [Test]
         public void PaperShouldBeatRock()
         {
@@ -95,7 +101,7 @@ namespace RockScissorsPaper
         [Test]
         public void ScissorsShouldNotBeatItself()
         {
-            Assert.AreEqual(false, new Scissors().BeatsScissors());   
+            Assert.AreEqual(false, new Scissors().BeatsScissors());
         }
 
         [Test]
@@ -108,6 +114,6 @@ namespace RockScissorsPaper
         public void ScissorsShouldBeatPaper()
         {
             Assert.AreEqual(true, new Scissors().BeatsPaper());
-        }
+        }     
     }
 }
