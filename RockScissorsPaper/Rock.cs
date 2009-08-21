@@ -1,6 +1,6 @@
 namespace RockScissorsPaper
 {
-    public class Rock : RockScissorsPaperTest.WeaponOfMassDestruction
+    public class Rock : WeaponOfMassDestruction
     {
         public bool BeatsPaper()
         {
