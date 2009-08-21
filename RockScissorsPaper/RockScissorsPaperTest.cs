@@ -48,24 +48,6 @@ namespace RockScissorsPaper
             bool BeatsRock();
         }
 
-        public class Rock : WeaponOfMassDestruction
-        {
-            public bool BeatsPaper()
-            {
-                return false;
-            }
-
-            public bool BeatsRock()
-            {
-                return false;
-            }
-
-            public bool BeatsScissors()
-            {
-                return false;
-            }
-        }
-
         public class Paper : WeaponOfMassDestruction
         {
             public bool BeatsRock()
@@ -85,5 +67,23 @@ namespace RockScissorsPaper
         }
 
        
+    }
+
+    public class Rock : RockScissorsPaperTest.WeaponOfMassDestruction
+    {
+        public bool BeatsPaper()
+        {
+            return false;
+        }
+
+        public bool BeatsRock()
+        {
+            return false;
+        }
+
+        public bool BeatsScissors()
+        {
+            return false;
+        }
     }
 }
