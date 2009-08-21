@@ -44,7 +44,7 @@ namespace RockScissorsPaper
         [Test]
         public void ScissorsShouldNotBeatScissors()
         {
-            Assert.AreEqual(false, ScissorsBeatsScissors());   
+            Assert.AreEqual(false, new Scissors().BeatsScissors());   
         }
 
         [Test]
@@ -72,6 +72,24 @@ namespace RockScissorsPaper
         private bool ScissorsBeatsScissors()
         {
             return false;
+        }
+
+        public class Scissors : WeaponOfMassDestruction
+        {
+            public bool BeatsPaper()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            public bool BeatsScissors()
+            {
+                return false;
+            }
+
+            public bool BeatsRock()
+            {
+                throw new System.NotImplementedException();
+            }
         }
     }
 }
