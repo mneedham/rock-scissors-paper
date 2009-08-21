@@ -69,13 +69,11 @@ namespace RockScissorsPaper
         [Test]
         public void ResultOfPaperBattlingPaperShouldBeADraw()
         {
-            Assert.AreEqual("draw", PaperBattlingPaper());
+            Assert.AreEqual("draw", new Paper().Battling(new Paper()));
         }
 
-        private string PaperBattlingPaper()
-        {
-            return "draw";
-        }
+
+
     }
 
     [TestFixture]
