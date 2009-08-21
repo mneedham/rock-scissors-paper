@@ -86,24 +86,26 @@ namespace RockScissorsPaper
         [Test]
         public void PaperShouldBeRecognisedAsBeingDifferentToOtherWeapons()
         {
-            Assert.AreEqual(true, PaperIsDifferentToRock());
-            Assert.AreEqual(true, PaperIsDifferentToScissors());
-            Assert.AreEqual(false, PaperIsNotDifferentToPaper());
+            Assert.AreEqual(true, new WeaponComparison(new Paper(), new Rock()).AreDifferent());
+            Assert.AreEqual(true, new WeaponComparison(new Paper(), new Scissors()).AreDifferent());
+            Assert.AreEqual(false, new WeaponComparison(new Paper(), new Paper()).AreDifferent());
         }
 
-        private bool PaperIsDifferentToScissors()
+        public class WeaponComparison
         {
-            return true;
-        }
+            private readonly WeaponOfMassDestruction weaponOne;
+            private readonly WeaponOfMassDestruction weaponTwo;
 
-        private bool PaperIsNotDifferentToPaper()
-        {
-            return false;
-        }
+            public WeaponComparison(WeaponOfMassDestruction weaponOne, WeaponOfMassDestruction weaponTwo)
+            {
+                this.weaponOne = weaponOne;
+                this.weaponTwo = weaponTwo;
+            }
 
-        private bool PaperIsDifferentToRock()
-        {
-            return true;
+            public bool AreDifferent()
+            {
+                return weaponOne.GetType() != weaponTwo.GetType();
+            }
         }
 
         [Test]
