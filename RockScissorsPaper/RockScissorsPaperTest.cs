@@ -14,6 +14,14 @@ namespace RockScissorsPaper
 
             Assert.AreEqual(true, battle.HasWinner());
             Assert.AreEqual(rock, battle.Winner());
+
+            var rockWinsBattle = CommenceBattle(rock, scissors);
+            Assert.AreEqual(rock, rockWinsBattle.Winner);
+        }
+
+        private BattleResult CommenceBattle(Rock rock, Scissors scissors)
+        {
+            return BattleResult.WithWinner(rock);
         }
 
         [Test]
@@ -57,5 +65,23 @@ namespace RockScissorsPaper
         }
     }
 
-   
+    public class BattleResult
+    {
+        private readonly Rock rock;
+
+        private BattleResult(Rock rock)
+        {
+            this.rock = rock;
+        }
+
+        public IWeaponOfMassDestruction Winner
+        {
+            get { return rock; }
+        }
+
+        public static BattleResult WithWinner(Rock rock)
+        {
+            return new BattleResult(rock);
+        }
+    }
 }
