@@ -14,7 +14,7 @@ namespace RockScissorsPaper
         [Test]
         public void PaperShouldNotBeatItself()
         {
-            Assert.AreEqual(false, PaperBeatsPaper());
+            Assert.AreEqual(false, new Paper().BeatsPaper());
         }
 
         public class Paper
@@ -23,11 +23,11 @@ namespace RockScissorsPaper
             {
                 return true;
             }
-        }
 
-        private bool PaperBeatsPaper()
-        {
-            return false;
+            public bool BeatsPaper()
+            {
+                return false;
+            }
         }
 
        
