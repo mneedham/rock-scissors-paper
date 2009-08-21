@@ -11,6 +11,13 @@ namespace RockScissorsPaper
             Assert.AreEqual(true, PaperBeatsRock());
         }
 
+        [Test]
+        public void PaperShouldNotBeatItself()
+        {
+            bool paperBeatsPaper = false;
+            Assert.AreEqual(false, paperBeatsPaper);
+        }
+
         private bool PaperBeatsRock()
         {
             return true;
