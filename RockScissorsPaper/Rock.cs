@@ -12,11 +12,6 @@ namespace RockScissorsPaper
             return false;
         }
 
-        public bool Beats(WeaponOfMassDestruction weaponOfMassDestruction)
-        {
-            return !weaponOfMassDestruction.BeatsRock();
-        }
-
         public bool BeatsScissors()
         {
             return true;
