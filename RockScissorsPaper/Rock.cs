@@ -14,7 +14,11 @@ namespace RockScissorsPaper
 
         public string Battling(WeaponOfMassDestruction weapon)
         {
-            throw new System.NotImplementedException();
+            if (new WeaponComparison(this, weapon).AreDifferent())
+            {
+                return weapon.BeatsRock() ? "loss" : "win";
+            }
+            return "draw";
         }
 
         public bool BeatsScissors()
