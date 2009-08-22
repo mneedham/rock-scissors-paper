@@ -4,9 +4,9 @@ namespace RockScissorsPaper
 {
     public class BattleBase
     {
-        protected BattleResult BattleBetween(IWeapon scissors, IWeapon paper)
+        protected BattleResult BattleBetween(IWeapon weaponOne, IWeapon weaponTwo)
         {
-            return new Battle(scissors, paper).Commence();
+            return new Battle(weaponOne, weaponTwo).Commence();
         }
     }
 
