@@ -2,15 +2,11 @@
 {
     public class Battle
     {
-        private readonly IWeapon throwOne;
-        private readonly IWeapon throwTwo;
         private readonly WinnerDetermination winnerDetermination;
 
         public Battle(IWeapon throwOne, IWeapon throwTwo)
         {
-            this.throwOne = throwOne;
-            this.throwTwo = throwTwo;
-            winnerDetermination = new WinnerDetermination(this.throwOne, this.throwTwo);
+            winnerDetermination = new WinnerDetermination(throwOne, throwTwo);
         }
 
         public bool CanGetWinner()
