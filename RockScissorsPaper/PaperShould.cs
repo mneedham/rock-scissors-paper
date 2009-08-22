@@ -3,16 +3,15 @@ using NUnit.Framework;
 namespace RockScissorsPaper
 {
     [TestFixture]
-    public class PaperShould
+    public class PaperShould: BattleBase
     {
         [Test]
         public void BeatRock()
         {
             var rock = new Rock();
             var paper = new Paper();
-            var battle = new Battle(paper, rock);
 
-            var battleResult = battle.Commence();
+            var battleResult = BattleBetween(paper, rock);
 
             Assert.AreEqual(paper, battleResult.Winner);
         }
@@ -22,9 +21,8 @@ namespace RockScissorsPaper
         {
             var paper = new Paper();
             var scissors = new Scissors();
-            var battle = new Battle(paper, scissors);
 
-            var battleResult = battle.Commence();
+            var battleResult = BattleBetween(paper, scissors);
 
             Assert.AreEqual(scissors, battleResult.Winner);
         }
@@ -32,9 +30,7 @@ namespace RockScissorsPaper
         [Test]
         public void DrawWithAnotherPaper()
         {
-            var battle = new Battle(new Paper(), new Paper());
-
-            var battleResult = battle.Commence();
+            var battleResult = BattleBetween(new Paper(), new Paper());
 
             Assert.AreEqual(false, battleResult.HasWinner);
         }
