@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BattleResult.cs" />
+    <Compile Include="BattleResultTest.cs" />
     <Compile Include="PaperShould.cs" />
     <Compile Include="RockShould.cs" />
     <Compile Include="Paper.cs" />
