@@ -58,6 +58,7 @@
     <Compile Include="Battle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scissors.cs" />
+    <Compile Include="ScissorsShould.cs" />
     <Compile Include="WeaponBase.cs" />
     <Compile Include="WinnerDetermination.cs" />
     <Compile Include="WeaponComparisonTest.cs" />
