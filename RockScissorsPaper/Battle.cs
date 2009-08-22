@@ -9,19 +9,14 @@
             winnerDetermination = new WinnerDetermination(throwOne, throwTwo);
         }
 
-        public bool CanGetWinner()
+        private bool CanGetWinner()
         {
             return winnerDetermination.CanWeGetAWinner();
         }
 
         public BattleResult Commence()
         {
-            return CanGetWinner() ? BattleResult.WithWinner(DetermineWinner()) : BattleResult.WithNoWinner();
-        }
-
-        public IWeapon DetermineWinner()
-        {
-            return winnerDetermination.Winner();
+            return CanGetWinner() ? BattleResult.WithWinner(winnerDetermination.Winner()) : BattleResult.WithNoWinner();
         }
     }
 }
