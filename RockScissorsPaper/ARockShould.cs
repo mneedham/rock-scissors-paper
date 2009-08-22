@@ -32,7 +32,7 @@ namespace RockScissorsPaper
         }
 
         [Test]
-        public void HaveNoWinnerAgainstAnotherRock()
+        public void DrawWithAnotherRock()
         {
             var battle = new RockScissorsPaperTest.Battle(new Rock(), new Rock());
 
