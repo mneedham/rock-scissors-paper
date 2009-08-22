@@ -1,3 +1,5 @@
+using System;
+
 namespace RockScissorsPaper
 {
     public class WinnerDetermination
@@ -14,6 +16,22 @@ namespace RockScissorsPaper
         public bool CanWeGetAWinner()
         {
             return weaponOne.GetType() != weaponTwo.GetType();
+        }
+
+        public IWeapon Winner()
+        {
+            if (!CanWeGetAWinner())
+            {
+                throw new NoWinnerException();
+            }
+            return weaponOne.Beats(weaponTwo) ? weaponOne : weaponTwo;
+        }
+    }
+
+    internal class NoWinnerException : Exception
+    {
+        public NoWinnerException() : base("We can't get a winner")
+        {
         }
     }
 }

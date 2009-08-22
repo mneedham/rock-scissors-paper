@@ -23,5 +23,10 @@ namespace RockScissorsPaper
             }
             return "draw";
         }
+
+        public bool Beats(IWeapon weapon)
+        {
+            return !beatenBy(weapon);
+        }
     }
 }
