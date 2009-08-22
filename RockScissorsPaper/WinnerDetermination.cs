@@ -15,7 +15,7 @@ namespace RockScissorsPaper
 
         public bool CanWeGetAWinner()
         {
-            return weaponOne.GetType() != weaponTwo.GetType();
+            return weaponOne.IsDifferentWeaponTo(weaponTwo);
         }
 
         public IWeapon Winner()

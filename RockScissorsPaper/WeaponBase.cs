@@ -17,12 +17,12 @@ namespace RockScissorsPaper
 
         public bool Beats(IWeapon weapon)
         {
-            return !(IsSameWeaponAs(weapon) || beatenBy(weapon));
+            return IsDifferentWeaponTo(weapon) && !beatenBy(weapon);
         }
 
-        private bool IsSameWeaponAs(IWeapon weapon)
+        public bool IsDifferentWeaponTo(IWeapon weapon)
         {
-            return GetType() == weapon.GetType();
+            return GetType() != weapon.GetType();
         }
     }
 }

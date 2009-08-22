@@ -6,5 +6,6 @@ namespace RockScissorsPaper
         bool BeatsScissors();
         bool BeatsRock();
         bool Beats(IWeapon weapon);
+        bool IsDifferentWeaponTo(IWeapon weapon);
     }
 }
