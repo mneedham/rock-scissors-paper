@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BattleResult.cs" />
     <Compile Include="PaperShould.cs" />
     <Compile Include="RockShould.cs" />
     <Compile Include="Paper.cs" />
