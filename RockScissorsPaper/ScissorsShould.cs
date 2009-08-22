@@ -2,8 +2,16 @@ using NUnit.Framework;
 
 namespace RockScissorsPaper
 {
+    public class BattleBase
+    {
+        protected BattleResult BattleBetween(IWeapon scissors, IWeapon paper)
+        {
+            return new Battle(scissors, paper).Commence();
+        }
+    }
+
     [TestFixture]
-    public class ScissorsShould
+    public class ScissorsShould : BattleBase
     {
         [Test]
         public void BeatPaper()
@@ -14,11 +22,6 @@ namespace RockScissorsPaper
             var battleResult = BattleBetween(scissors, paper);
 
             Assert.AreEqual(scissors, battleResult.Winner);
-        }
-
-        private BattleResult BattleBetween(IWeapon scissors, IWeapon paper)
-        {
-            return new Battle(scissors, paper).Commence();
         }
 
         [Test]
