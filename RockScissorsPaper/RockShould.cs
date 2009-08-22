@@ -30,7 +30,15 @@ namespace RockScissorsPaper
             var battleResult = BattleBetween(scissors, rock);
 
             Assert.AreEqual(rock, battleResult.Winner);
-        } 
+        }
+
+        [Test]
+        public void DrawWithAnotherScissors()
+        {
+            var battleResult = BattleBetween(new Scissors(), new Scissors());
+
+            Assert.AreEqual(false, battleResult.HasWinner);
+        }
     }
 
     [TestFixture]
