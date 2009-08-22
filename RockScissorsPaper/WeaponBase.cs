@@ -2,8 +2,6 @@ using System;
 
 namespace RockScissorsPaper
 {
-
-
     public abstract class WeaponBase : IWeapon
     {
         private readonly Func<IWeapon, bool> beatenBy;
@@ -19,10 +17,10 @@ namespace RockScissorsPaper
 
         public bool Beats(IWeapon weapon)
         {
-            return !(SameWeapon(weapon) || beatenBy(weapon));
+            return !(IsSameWeaponAs(weapon) || beatenBy(weapon));
         }
 
-        private bool SameWeapon(IWeapon weapon)
+        private bool IsSameWeaponAs(IWeapon weapon)
         {
             return GetType() == weapon.GetType();
         }
