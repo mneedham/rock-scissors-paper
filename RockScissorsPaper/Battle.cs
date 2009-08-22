@@ -25,16 +25,7 @@
 
         public IWeapon DetermineWinner()
         {
-            var result = throwOne.Battling(throwTwo);
-            if(result == "win")
-            {
-                return throwOne;
-            }
-            if(result == "draw")
-            {
-                return null;
-            }
-            return throwTwo;
+            return winnerDetermination.Winner();
         }
     }
 
