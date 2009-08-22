@@ -3,7 +3,7 @@ using NUnit.Framework;
 namespace RockScissorsPaper
 {
     [TestFixture]
-    public class WinnerDeterminationTest
+    public class ThrowDownAdjudictorTest
     {
         [Test]
         public void ShouldTellThatRockBeatsScissors()
@@ -11,7 +11,7 @@ namespace RockScissorsPaper
             var rock = new Rock();
             var scissors = new Scissors();
 
-            var winner = new WinnerDetermination(scissors, rock).Winner();
+            var winner = new ThrowDownAdjudicator(scissors, rock).Winner();
             
             Assert.AreEqual(rock, winner);
         }
@@ -22,7 +22,7 @@ namespace RockScissorsPaper
             var paper = new Paper();
             var rock = new Rock();
 
-            var winner = new WinnerDetermination(paper, rock).Winner();
+            var winner = new ThrowDownAdjudicator(paper, rock).Winner();
 
             Assert.AreEqual(paper, winner); 
         }
@@ -30,9 +30,9 @@ namespace RockScissorsPaper
         [Test]
         public void ShouldThrowAnExceptionIfWeCannotDetermineAWinner()
         {
-            Assert.Throws<NoWinnerException>( () => new WinnerDetermination(new Paper(), new Paper()).Winner());
-            Assert.Throws<NoWinnerException>( () => new WinnerDetermination(new Rock(), new Rock()).Winner());
-            Assert.Throws<NoWinnerException>(() => new WinnerDetermination(new Scissors(), new Scissors()).Winner());
+            Assert.Throws<NoWinnerException>( () => new ThrowDownAdjudicator(new Paper(), new Paper()).Winner());
+            Assert.Throws<NoWinnerException>( () => new ThrowDownAdjudicator(new Rock(), new Rock()).Winner());
+            Assert.Throws<NoWinnerException>(() => new ThrowDownAdjudicator(new Scissors(), new Scissors()).Winner());
         }
     }
 }

@@ -2,25 +2,25 @@ using System;
 
 namespace RockScissorsPaper
 {
-    public class WinnerDetermination
+    public class ThrowDownAdjudicator
     {
         private readonly IWeapon weaponOne;
         private readonly IWeapon weaponTwo;
 
-        public WinnerDetermination(IWeapon weaponOne, IWeapon weaponTwo)
+        public ThrowDownAdjudicator(IWeapon weaponOne, IWeapon weaponTwo)
         {
             this.weaponOne = weaponOne;
             this.weaponTwo = weaponTwo;
         }
 
-        public bool CanWeGetAWinner()
+        public bool DoWeHaveAWinner()
         {
             return weaponOne.IsDifferentWeaponTo(weaponTwo);
         }
 
         public IWeapon Winner()
         {
-            if (!CanWeGetAWinner())
+            if (!DoWeHaveAWinner())
             {
                 throw new NoWinnerException();
             }

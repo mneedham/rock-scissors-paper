@@ -2,21 +2,21 @@
 {
     public class ThrowDown
     {
-        private readonly WinnerDetermination winnerDetermination;
+        private readonly ThrowDownAdjudicator throwDownAdjudicator;
 
         public ThrowDown(IWeapon throwOne, IWeapon throwTwo)
         {
-            winnerDetermination = new WinnerDetermination(throwOne, throwTwo);
+            throwDownAdjudicator = new ThrowDownAdjudicator(throwOne, throwTwo);
         }
 
-        private bool CanGetWinner()
+        private bool DoWeHaveWinner()
         {
-            return winnerDetermination.CanWeGetAWinner();
+            return throwDownAdjudicator.DoWeHaveAWinner();
         }
 
         public ThrowDownResult Commence()
         {
-            return CanGetWinner() ? ThrowDownResult.WithWinner(winnerDetermination.Winner()) : ThrowDownResult.WithNoWinner();
+            return DoWeHaveWinner() ? ThrowDownResult.WithWinner(throwDownAdjudicator.Winner()) : ThrowDownResult.WithNoWinner();
         }
     }
 }

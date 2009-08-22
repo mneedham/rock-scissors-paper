@@ -61,11 +61,11 @@
     <Compile Include="Scissors.cs" />
     <Compile Include="ScissorsShould.cs" />
     <Compile Include="WeaponBase.cs" />
-    <Compile Include="WinnerDetermination.cs" />
+    <Compile Include="ThrowDownAdjudicator.cs" />
     <Compile Include="WeaponComparisonTest.cs" />
     <Compile Include="IWeapon.cs" />
     <Compile Include="WeaponOfMassDestructionTest.cs" />
-    <Compile Include="WinnerDeterminationTest.cs" />
+    <Compile Include="ThrowDownAdjudictorTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
