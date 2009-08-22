@@ -4,7 +4,7 @@
     {
         private readonly ThrowDownAdjudicator throwDownAdjudicator;
 
-        public ThrowDown(IWeapon throwOne, IWeapon throwTwo)
+        public ThrowDown(IThrow throwOne, IThrow throwTwo)
         {
             throwDownAdjudicator = new ThrowDownAdjudicator(throwOne, throwTwo);
         }

@@ -60,11 +60,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scissors.cs" />
     <Compile Include="ScissorsShould.cs" />
-    <Compile Include="WeaponBase.cs" />
+    <Compile Include="ThrowBase.cs" />
     <Compile Include="ThrowDownAdjudicator.cs" />
-    <Compile Include="WeaponComparisonTest.cs" />
-    <Compile Include="IWeapon.cs" />
-    <Compile Include="WeaponOfMassDestructionTest.cs" />
+    <Compile Include="ThrowDownAdjudicatorTest.cs" />
+    <Compile Include="IThrow.cs" />
+    <Compile Include="ThrowTest.cs" />
     <Compile Include="ThrowDownAdjudictorTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

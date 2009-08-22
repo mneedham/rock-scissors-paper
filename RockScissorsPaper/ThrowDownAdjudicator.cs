@@ -4,27 +4,27 @@ namespace RockScissorsPaper
 {
     public class ThrowDownAdjudicator
     {
-        private readonly IWeapon weaponOne;
-        private readonly IWeapon weaponTwo;
+        private readonly IThrow throwOne;
+        private readonly IThrow throwTwo;
 
-        public ThrowDownAdjudicator(IWeapon weaponOne, IWeapon weaponTwo)
+        public ThrowDownAdjudicator(IThrow throwOne, IThrow throwTwo)
         {
-            this.weaponOne = weaponOne;
-            this.weaponTwo = weaponTwo;
+            this.throwOne = throwOne;
+            this.throwTwo = throwTwo;
         }
 
         public bool DoWeHaveAWinner()
         {
-            return weaponOne.IsDifferentWeaponTo(weaponTwo);
+            return throwOne.IsDifferentThrowTo(throwTwo);
         }
 
-        public IWeapon Winner()
+        public IThrow Winner()
         {
             if (!DoWeHaveAWinner())
             {
                 throw new NoWinnerException();
             }
-            return weaponOne.Beats(weaponTwo) ? weaponOne : weaponTwo;
+            return throwOne.Beats(throwTwo) ? throwOne : throwTwo;
         }
     }
 

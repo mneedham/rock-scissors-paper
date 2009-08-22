@@ -1,6 +1,6 @@
 namespace RockScissorsPaper
 {
-    public class Scissors : WeaponBase
+    public class Scissors : ThrowBase
     {
         public Scissors() : base(weapon => weapon.BeatsScissors()) { }
 

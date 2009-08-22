@@ -2,9 +2,9 @@ namespace RockScissorsPaper
 {
     public class ThrowDownTestBase
     {
-        protected ThrowDownResult ThrowDownBetween(IWeapon weaponOne, IWeapon weaponTwo)
+        protected ThrowDownResult ThrowDownBetween(IThrow throwOne, IThrow throwTwo)
         {
-            return new ThrowDown(weaponOne, weaponTwo).Commence();
+            return new ThrowDown(throwOne, throwTwo).Commence();
         }
     }
 }

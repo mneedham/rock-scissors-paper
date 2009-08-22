@@ -1,11 +1,11 @@
 namespace RockScissorsPaper
 {
-    public interface IWeapon
+    public interface IThrow
     {
         bool BeatsPaper();
         bool BeatsScissors();
         bool BeatsRock();
-        bool Beats(IWeapon weapon);
-        bool IsDifferentWeaponTo(IWeapon weapon);
+        bool Beats(IThrow aThrow);
+        bool IsDifferentThrowTo(IThrow aThrow);
     }
 }

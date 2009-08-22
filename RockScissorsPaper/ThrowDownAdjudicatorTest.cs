@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace RockScissorsPaper
 {
     [TestFixture]
-    public class WeaponComparisonTest
+    public class ThrowDownAdjudicatorTest
     {
         [Test]
         public void PaperShouldBeRecognisedAsBeingDifferentToOtherWeapons()

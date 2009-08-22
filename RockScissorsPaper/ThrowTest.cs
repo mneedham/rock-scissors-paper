@@ -3,7 +3,7 @@ using NUnit.Framework;
 namespace RockScissorsPaper
 {
     [TestFixture]
-    public class WeaponOfMassDestructionTest
+    public class ThrowTest
     {
         [Test]
         public void PaperVersusTheRest()
