@@ -18,13 +18,21 @@
 
         public BattleResult Commence()
         {
-            return HasWinner() ? BattleResult.WithWinner(Winner()) : BattleResult.WithNoWinner();
+            return HasWinner() ? BattleResult.WithWinner(DetermineWinner()) : BattleResult.WithNoWinner();
         }
 
-        public IWeapon Winner()
+        public IWeapon DetermineWinner()
         {
-            bool beatRock = throwTwo.BeatsRock();
-            return beatRock ? throwTwo : throwOne;
+            var result = throwOne.Battling(throwTwo);
+            if(result == "win")
+            {
+                return throwOne;
+            }
+            if(result == "draw")
+            {
+                return null;
+            }
+            return throwTwo;
         }
     }
 
