@@ -4,21 +4,23 @@
     {
         private readonly IWeapon throwOne;
         private readonly IWeapon throwTwo;
+        private readonly WinnerDetermination winnerDetermination;
 
         public Battle(IWeapon throwOne, IWeapon throwTwo)
         {
             this.throwOne = throwOne;
             this.throwTwo = throwTwo;
+            winnerDetermination = new WinnerDetermination(this.throwOne, this.throwTwo);
         }
 
-        public bool HasWinner()
+        public bool CanGetWinner()
         {
-            return new WinnerDetermination(throwOne, throwTwo).CanWeGetAWinner();
+            return winnerDetermination.CanWeGetAWinner();
         }
 
         public BattleResult Commence()
         {
-            return HasWinner() ? BattleResult.WithWinner(DetermineWinner()) : BattleResult.WithNoWinner();
+            return CanGetWinner() ? BattleResult.WithWinner(DetermineWinner()) : BattleResult.WithNoWinner();
         }
 
         public IWeapon DetermineWinner()
