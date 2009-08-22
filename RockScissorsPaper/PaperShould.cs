@@ -14,7 +14,6 @@ namespace RockScissorsPaper
 
             var battleResult = battle.Commence();
 
-            Assert.AreEqual(true, battleResult.HasWinner);
             Assert.AreEqual(paper, battleResult.Winner);
         }
 
@@ -27,8 +26,17 @@ namespace RockScissorsPaper
 
             var battleResult = battle.Commence();
 
-            Assert.AreEqual(true, battleResult.HasWinner);
             Assert.AreEqual(scissors, battleResult.Winner);
+        }
+
+        [Test]
+        public void DrawWithAnotherPaper()
+        {
+            var battle = new Battle(new Paper(), new Paper());
+
+            var battleResult = battle.Commence();
+
+            Assert.AreEqual(false, battleResult.HasWinner);
         }
     }
 }
