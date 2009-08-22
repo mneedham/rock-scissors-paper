@@ -4,7 +4,7 @@ using RockScissorsPaper;
 namespace RockScissorsPaper
 {
     [TestFixture]
-    public class ScissorsShould : BattleBase
+    public class ScissorsShould : ThrowDownTestBase
     {
         [Test]
         public void BeatPaper()
@@ -12,7 +12,7 @@ namespace RockScissorsPaper
             var scissors = new Scissors();
             var paper = new Paper();
 
-            var battleResult = BattleBetween(scissors, paper);
+            var battleResult = ThrowDownBetween(scissors, paper);
 
             Assert.AreEqual(scissors, battleResult.Winner);
         }
@@ -23,7 +23,7 @@ namespace RockScissorsPaper
             var scissors = new Scissors();
             var rock = new Rock();
 
-            var battleResult = BattleBetween(scissors, rock);
+            var battleResult = ThrowDownBetween(scissors, rock);
 
             Assert.AreEqual(rock, battleResult.Winner);
         }
@@ -31,7 +31,7 @@ namespace RockScissorsPaper
         [Test]
         public void DrawWithAnotherScissors()
         {
-            var battleResult = BattleBetween(new Scissors(), new Scissors());
+            var battleResult = ThrowDownBetween(new Scissors(), new Scissors());
 
             Assert.AreEqual(false, battleResult.HasWinner);
         }

@@ -49,14 +49,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BattleBase.cs" />
-    <Compile Include="BattleResult.cs" />
-    <Compile Include="BattleResultTest.cs" />
+    <Compile Include="ThrowDownTestBase.cs" />
+    <Compile Include="ThrowDownResult.cs" />
+    <Compile Include="ThrowDownResultTest.cs" />
     <Compile Include="PaperShould.cs" />
     <Compile Include="RockShould.cs" />
     <Compile Include="Paper.cs" />
     <Compile Include="Rock.cs" />
-    <Compile Include="Battle.cs" />
+    <Compile Include="ThrowDown.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scissors.cs" />
     <Compile Include="ScissorsShould.cs" />

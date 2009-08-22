@@ -1,10 +1,10 @@
 namespace RockScissorsPaper
 {
-    public class BattleResult
+    public class ThrowDownResult
     {
         private readonly IWeapon winner;
 
-        private BattleResult(IWeapon winner)
+        private ThrowDownResult(IWeapon winner)
         {
             this.winner = winner;
         }
@@ -19,14 +19,14 @@ namespace RockScissorsPaper
             get { return winner != null; }
         }
 
-        public static BattleResult WithWinner(IWeapon winner)
+        public static ThrowDownResult WithWinner(IWeapon winner)
         {
-            return new BattleResult(winner);
+            return new ThrowDownResult(winner);
         }
 
-        public static BattleResult WithNoWinner()
+        public static ThrowDownResult WithNoWinner()
         {
-            return new BattleResult(null);
+            return new ThrowDownResult(null);
         }
     }
 }

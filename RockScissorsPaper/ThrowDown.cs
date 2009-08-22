@@ -1,10 +1,10 @@
 ﻿namespace RockScissorsPaper
 {
-    public class Battle
+    public class ThrowDown
     {
         private readonly WinnerDetermination winnerDetermination;
 
-        public Battle(IWeapon throwOne, IWeapon throwTwo)
+        public ThrowDown(IWeapon throwOne, IWeapon throwTwo)
         {
             winnerDetermination = new WinnerDetermination(throwOne, throwTwo);
         }
@@ -14,9 +14,9 @@
             return winnerDetermination.CanWeGetAWinner();
         }
 
-        public BattleResult Commence()
+        public ThrowDownResult Commence()
         {
-            return CanGetWinner() ? BattleResult.WithWinner(winnerDetermination.Winner()) : BattleResult.WithNoWinner();
+            return CanGetWinner() ? ThrowDownResult.WithWinner(winnerDetermination.Winner()) : ThrowDownResult.WithNoWinner();
         }
     }
 }
