@@ -1,17 +1,17 @@
 namespace RockScissorsPaper
 {
-    public class WeaponComparison
+    public class WinnerDetermination
     {
         private readonly IWeapon weaponOne;
         private readonly IWeapon weaponTwo;
 
-        public WeaponComparison(IWeapon weaponOne, IWeapon weaponTwo)
+        public WinnerDetermination(IWeapon weaponOne, IWeapon weaponTwo)
         {
             this.weaponOne = weaponOne;
             this.weaponTwo = weaponTwo;
         }
 
-        public bool AreDifferent()
+        public bool CanWeGetAWinner()
         {
             return weaponOne.GetType() != weaponTwo.GetType();
         }

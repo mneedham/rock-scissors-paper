@@ -8,9 +8,9 @@ namespace RockScissorsPaper
         [Test]
         public void PaperShouldBeRecognisedAsBeingDifferentToOtherWeapons()
         {
-            Assert.AreEqual(true, new WeaponComparison(new Paper(), new Rock()).AreDifferent());
-            Assert.AreEqual(true, new WeaponComparison(new Paper(), new Scissors()).AreDifferent());
-            Assert.AreEqual(false, new WeaponComparison(new Paper(), new Paper()).AreDifferent());
+            Assert.AreEqual(true, new WinnerDetermination(new Paper(), new Rock()).CanWeGetAWinner());
+            Assert.AreEqual(true, new WinnerDetermination(new Paper(), new Scissors()).CanWeGetAWinner());
+            Assert.AreEqual(false, new WinnerDetermination(new Paper(), new Paper()).CanWeGetAWinner());
         }
     }
 }

@@ -13,7 +13,7 @@
 
         public bool HasWinner()
         {
-            return new WeaponComparison(throwOne, throwTwo).AreDifferent();
+            return new WinnerDetermination(throwOne, throwTwo).CanWeGetAWinner();
         }
 
         public BattleResult Commence()

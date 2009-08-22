@@ -17,7 +17,7 @@ namespace RockScissorsPaper
 
         public string Battling(IWeapon weapon)
         {
-            if (new WeaponComparison(this, weapon).AreDifferent())
+            if (new WinnerDetermination(this, weapon).CanWeGetAWinner())
             {
                 return beatenBy(weapon) ? "loss" : "win";
             }
