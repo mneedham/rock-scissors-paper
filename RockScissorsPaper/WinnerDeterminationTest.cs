@@ -31,6 +31,8 @@ namespace RockScissorsPaper
         public void ShouldThrowAnExceptionIfWeCannotDetermineAWinner()
         {
             Assert.Throws<NoWinnerException>( () => new WinnerDetermination(new Paper(), new Paper()).Winner());
+            Assert.Throws<NoWinnerException>( () => new WinnerDetermination(new Rock(), new Rock()).Winner());
+            Assert.Throws<NoWinnerException>(() => new WinnerDetermination(new Scissors(), new Scissors()).Winner());
         }
     }
 }
