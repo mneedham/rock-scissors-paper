@@ -65,7 +65,6 @@
     <Compile Include="WeaponComparisonTest.cs" />
     <Compile Include="IWeapon.cs" />
     <Compile Include="WeaponOfMassDestructionTest.cs" />
-    <Compile Include="WeaponsBattlingTest.cs" />
     <Compile Include="WinnerDeterminationTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
